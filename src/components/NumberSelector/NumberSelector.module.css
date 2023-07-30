@@ -1,0 +1,27 @@
+.selectorBoard {
+  display: flex;
+  gap: 24px;
+}
+
+.numSelector {
+  display: flex;
+  border: 1px solid;
+  padding: 15px;
+  cursor: pointer;
+  
+}
+.selected{
+  background-color: black;
+  color:white;
+}
+
+.selectorContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+}
+
+.errorText{
+  margin-bottom: 5px;
+  color: red;
+}

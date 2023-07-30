@@ -1,0 +1,14 @@
+.rulesContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #e7e7e7;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 10px;
+}
+.textHeading {
+  font-size: 24px;
+}
+.textNormal {
+  margin-top: 20px;
+}

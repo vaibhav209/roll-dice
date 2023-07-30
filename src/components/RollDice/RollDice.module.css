@@ -1,0 +1,39 @@
+.rollDice {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 5%;
+}
+.resetBtn {
+  cursor: pointer;
+  margin-top: 5px;
+  border: 1px solid;
+  background-color: white;
+  color: black;
+  min-width: 120px;
+  padding: 10px 18px;
+  border-radius: 7px;
+}
+
+.resetBtn:hover {
+  background-color: black;
+  color: white;
+}
+.ruleBtn {
+  cursor: pointer;
+  margin-top: 5px;
+  border: 1px solid;
+  background-color: black;
+  color: white;
+  min-width: 120px;
+  padding: 10px 18px;
+  border-radius: 7px;
+}
+.ruleBtn:hover {
+  background-color: white;
+  color: black;
+}
+.btnStyles {
+  cursor: pointer;
+}
