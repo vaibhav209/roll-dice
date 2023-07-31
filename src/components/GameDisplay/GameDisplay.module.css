@@ -3,10 +3,29 @@
   justify-content: space-around;
   margin-top: 42px;
 }
+.gameWall {
+  padding: 20px;
+  text-align: center;
+  margin-top: 15%;
+}
 
+.gameWall div {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
 
+.playBtn {
+  background-color: #000000;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
 
-
-
-
-
+.playBtn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
