@@ -13,6 +13,8 @@ const GameDisplay = () => {
   const [errorMsg, setErrorMsg] = useState(false);
   const [score, setScore] = useState(0);
   const [showRules, setShowRules] = useState(false);
+  const [ruleBtnName, setRuleBtnName] = useState('Show Rules');
+  const [welcmWall, setWelcmWall] = useState(true);
 
   const diceBtnHandler = () => {
     if (selectedNumber === null) {
@@ -42,30 +44,49 @@ const GameDisplay = () => {
   };
   const ruleToggleHandler = () => {
     setShowRules((prevShowRule) => !prevShowRule);
+
+    setRuleBtnName((prevName) =>
+      prevName === 'Show Rules' ? 'Hide Rules' : 'Show Rules'
+    );
   };
 
   const photo = `https://cdn2.iconfinder.com/data/icons/dice-roll/100/dice_${diceNumber}-256.png`;
 
   return (
     <>
-      <div className={styles.gameBoard}>
-        <GameScore score={score} />
-        <div className={styles.selectorContainer}>
-          <NumberSelector
-            arr={arr}
-            selectedNumber={selectedNumber}
-            errorMsg={errorMsg}
-            handleNumberSelection={handleNumberSelection}
-          />
+      {welcmWall ? (
+        <div className={styles.gameWall}>
+          <div>Welcome to the Dice Game!</div>
+          <button
+            className={styles.playBtn}
+            onClick={() => setWelcmWall(false)}
+          >
+            Play Now
+          </button>
         </div>
-      </div>
-      <RollDice
-        photo={photo}
-        diceBtnHandler={diceBtnHandler}
-        resetBtnHandler={resetBtnHandler}
-        ruleToggleHandler={ruleToggleHandler}
-      />
-      {showRules && <GameRules />}
+      ) : (
+        <>
+          <div className={styles.gameBoard}>
+            <GameScore score={score} />
+            <div className={styles.selectorContainer}>
+              <NumberSelector
+                arr={arr}
+                selectedNumber={selectedNumber}
+                errorMsg={errorMsg}
+                handleNumberSelection={handleNumberSelection}
+              />
+            </div>
+          </div>
+          <RollDice
+            photo={photo}
+            diceBtnHandler={diceBtnHandler}
+            resetBtnHandler={resetBtnHandler}
+            ruleToggleHandler={ruleToggleHandler}
+            btnName={ruleBtnName}
+          />
+          {showRules && <GameRules />}
+        </>
+      )}
     </>
   );
 };
