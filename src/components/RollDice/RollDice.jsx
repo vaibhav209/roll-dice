@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './RollDice.module.css';
 
-const RollDice = ({ photo, diceBtnHandler, resetBtnHandler, ruleToggleHandler }) => {
+const RollDice = ({ btnName, photo, diceBtnHandler, resetBtnHandler, ruleToggleHandler }) => {
   return (
     <div className={styles.rollDice}>
         <div>
@@ -20,7 +20,7 @@ const RollDice = ({ photo, diceBtnHandler, resetBtnHandler, ruleToggleHandler })
           </button>
           <div>
             <button className={styles.ruleBtn} onClick={ruleToggleHandler}>
-              Show Rules
+              {btnName}
             </button>
           </div>
         </div>
