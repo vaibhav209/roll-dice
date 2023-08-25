@@ -32,6 +32,7 @@ const GameDisplay = () => {
       setScore(score - 2);
     }
     setErrorMsg(false);
+    setSelectedNumber(null);
   };
 
   const handleNumberSelection = (value) => {
